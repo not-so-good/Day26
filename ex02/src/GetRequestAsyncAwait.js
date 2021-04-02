@@ -7,7 +7,7 @@ class GetRequstAsyncAwait extends React.Component {
     this.state = { totalReactPackages: null };
   }
 
-  componentDidMount() {
+  async componentDidMount() {
     const response = await axios.get("https://api.npms.io/v2/search?q=react");
     this.setState({ totalReactPackages: response.data.total });
   }
