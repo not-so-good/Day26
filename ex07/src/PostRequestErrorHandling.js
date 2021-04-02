@@ -14,10 +14,10 @@ class PostRequestErrorHandling extends React.Component {
       .then((response) => this.setState({ articleId: response.data.id }))
       .catch((error) => {
         this.setState({ errorMessage: error.message });
-        console.error("There ewas an error!", error);
+        console.error("There was an error!", error);
       });
   }
-  
+
   render() {
     const { errorMessage } = this.state;
     return (
